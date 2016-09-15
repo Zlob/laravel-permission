@@ -131,4 +131,8 @@ return [
 
     ],
 
+    'routes' => [
+        'base_route' => '/dashboard'
+    ]
+
 ];

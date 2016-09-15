@@ -28,6 +28,10 @@ class PermissionServiceProvider extends ServiceProvider
             ], 'migrations');
         }
 
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'/../src/Routes/routes.php';
+        }
+
         $permissionLoader->registerPermissions();
     }
 
